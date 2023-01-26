@@ -1,0 +1,194 @@
+body{
+    background-color: #545F66;
+    width: 100vh;
+}
+.pantallaInicio{
+    padding: 0%;
+    display: inline-block;
+    align-items: center;
+    margin: auto;
+}
+/* numero a mostar*/
+.numero{
+    text-align: center;
+    font-size: 40px;
+    color: #706d6d;
+    position: relative;
+    z-index: 10;
+    left: 400px;
+    right: 10px;
+    top: 110px;
+}
+/*juegos v*/
+.jv{
+    margin: 0%;
+    color: #292929 ;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 400px;
+    top: 25px;
+    animation-name: salida;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes salida{
+    0%{
+        top: 55px;
+        opacity: 0%;
+    }
+
+}
+/* estilo de la consolo png*/
+.imgs {
+    margin: 0%;
+    position: relative;
+    bottom: 148px;
+    left: 419px;
+    transform: scale(0.70);
+    animation-name: salidaDos;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes salidaDos{
+    0%{
+        transform: scale(0.1);
+    }
+}
+/* contenedor de input*/
+.juego{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 320px;
+}
+/* pantalla de ganar o perder*/
+.adivina{
+    position: absolute;
+    top: 48%;
+    left: 45%;
+    color: #e6e6e6;
+    transition: all 5s ease-in-out;
+}
+
+/* input estilo*/
+input{
+    position: relative;
+    padding: 10px;
+    background: #292929a7;
+    color: #ffffff;
+    left: 370px;
+    top: 57px;
+}
+input:focus{
+    content: '';
+    background: #ffffff;
+    color: #292929;
+}
+/* boton estilo*/
+.accion{
+    border: 0;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 4px;
+    background: #ffffff;
+    color : #292929;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    left: 377px;
+    top: 57px;
+}
+
+/* movil */
+@media screen and (max-width:320px){
+    body{
+        width: 100%;
+    }
+    .imgs{
+        position: relative;
+        left: 0px;
+        width: 53vh;
+        top: -46px;
+        max-width: 70vh;
+    }
+    .accion{
+        display: flex;
+        align-items: center;
+        top: 210px;
+        position: relative;
+    }
+    input{
+        align-items: center;
+        display: flex;
+        top: 210px;
+    }
+    
+    .jv{
+        display: inline-block;
+        position: relative;
+        left: 57px;
+        top: 60px;
+    }
+}
+
+@media screen and (max-width:786px){
+        body{
+        width: 100%;
+    }
+    .imgs{
+        position: relative;
+        left: 188px;
+        width: 63vh;
+        top: -21px;
+        max-width: 70vh;
+    }
+    .accion{
+        display: flex;
+        align-items: center;
+        top: 210px;
+        position: relative;
+    }
+    input{
+        align-items: center;
+        display: flex;
+        top: 210px;
+    }
+    
+    .jv{
+        display: inline-block;
+        position: relative;
+        left: 287px;
+        top: 107px;
+    }
+}
+@media screen and (max-width:1024px) {
+        body{
+        width: 100%;
+    }
+    .imgs{
+        position: relative;
+        left: 307px;
+        top: -46px;
+        max-width: 70vh;
+    }
+    .accion{
+        display: flex;
+        align-items: center;
+        top: 198px;
+        position: relative;
+    }
+    input{
+        align-items: center;
+        display: flex;
+        top: 198px;
+    }
+    
+    .jv{
+        display: inline-block;
+        position: relative;
+        left: 421px;
+        top: 81px;
+    }
+}
