@@ -1,194 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.contant{
     background-color: #545F66;
-    width: 100vh;
+    width: 100%;
+    height: 100vh;
 }
-.pantallaInicio{
-    padding: 0%;
-    display: inline-block;
+
+.inico{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
     align-items: center;
-    margin: auto;
+    flex-direction: column;
+    padding: 40px;
 }
-/* numero a mostar*/
-.numero{
-    text-align: center;
-    font-size: 40px;
-    color: #706d6d;
-    position: relative;
-    z-index: 10;
-    left: 400px;
-    right: 10px;
-    top: 110px;
+/*inicio  de pantallla  */
+.inico img{
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
 }
-/*juegos v*/
-.jv{
-    margin: 0%;
-    color: #292929 ;
-    font-size: 45px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: 400px;
-    top: 25px;
-    animation-name: salida;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+.inico h1{
+    color: #ffff;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
 }
-@keyframes salida{
-    0%{
-        top: 55px;
-        opacity: 0%;
-    }
-
+.inico input[Type="text"]{
+    width: 5%;
+    padding: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #ccd2d5;
+    transition: .5s ease;
 }
-/* estilo de la consolo png*/
-.imgs {
-    margin: 0%;
-    position: relative;
-    bottom: 148px;
-    left: 419px;
-    transform: scale(0.70);
-    animation-name: salidaDos;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-@keyframes salidaDos{
-    0%{
-        transform: scale(0.1);
-    }
-}
-/* contenedor de input*/
-.juego{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 320px;
-}
-/* pantalla de ganar o perder*/
-.adivina{
-    position: absolute;
-    top: 48%;
-    left: 45%;
-    color: #e6e6e6;
-    transition: all 5s ease-in-out;
-}
-
-/* input estilo*/
-input{
-    position: relative;
+.inico input[Type="text"]:focus{
+    width: 5%;
+    border: 1px  solid #40464a;
+    box-shadow: 0px 0px 15px 2px #f4f5f7;
     padding: 10px;
-    background: #292929a7;
-    color: #ffffff;
-    left: 370px;
-    top: 57px;
 }
-input:focus{
-    content: '';
-    background: #ffffff;
-    color: #292929;
-}
-/* boton estilo*/
-.accion{
-    border: 0;
-    padding: 5px;
-    margin: 2px;
-    border-radius: 4px;
-    background: #ffffff;
-    color : #292929;
-    font-size: 15px;
+.inico button{
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 55%;
+    top: 79%;
+    background: transparent;
+    border: 1px  solid #f4f5f7;
+    color: #ffff;
     cursor: pointer;
+    transition: .5s ease;
+}
+.inico button:hover{
+    background: #232629;
+    border: none;
+}
+/* por poco */
+.por-poco{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.por-poco img{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
     position: relative;
-    left: 377px;
-    top: 57px;
+    left: 78px;
+    top: 25px;
+}
+.por-poco h1{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    text-transform: uppercase;
+}
+/* win */
+.win{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.win img{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    position: absolute;
+    z-index: 10;
+    animation: alternate fondo 1s  ease;
+    transition: .1s ease;
+}
+@keyframes fondo {
+    from{
+       transform: scale(0);
+    }to{
+        transform: scale(1);
+    }
 }
 
-/* movil */
-@media screen and (max-width:320px){
-    body{
-        width: 100%;
-    }
-    .imgs{
-        position: relative;
-        left: 0px;
-        width: 53vh;
-        top: -46px;
-        max-width: 70vh;
-    }
-    .accion{
-        display: flex;
-        align-items: center;
-        top: 210px;
-        position: relative;
-    }
-    input{
-        align-items: center;
-        display: flex;
-        top: 210px;
-    }
-    
-    .jv{
-        display: inline-block;
-        position: relative;
-        left: 57px;
-        top: 60px;
-    }
+.win h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    -webkit-text-fill-color: yellow;
+    text-shadow: 0 0 10px rgb(255, 255, 146);
+    animation: alternate win 2s ease;
+    transition: .5s ease;
 }
 
-@media screen and (max-width:786px){
-        body{
-        width: 100%;
+@keyframes win {
+    0%{
+        font-size: 0;       
     }
-    .imgs{
-        position: relative;
-        left: 188px;
-        width: 63vh;
-        top: -21px;
-        max-width: 70vh;
+    25%{
+        transform: rotate(10deg);
     }
-    .accion{
-        display: flex;
-        align-items: center;
-        top: 210px;
-        position: relative;
+    50%{
+        font-size: 150px;
+       
     }
-    input{
-        align-items: center;
-        display: flex;
-        top: 210px;
+    60%{
+        font-size: 200px;
     }
-    
-    .jv{
-        display: inline-block;
-        position: relative;
-        left: 287px;
-        top: 107px;
+
+    100%{
+        font-size: 100px;
     }
 }
-@media screen and (max-width:1024px) {
-        body{
-        width: 100%;
-    }
-    .imgs{
-        position: relative;
-        left: 307px;
-        top: -46px;
-        max-width: 70vh;
-    }
-    .accion{
-        display: flex;
-        align-items: center;
-        top: 198px;
-        position: relative;
-    }
-    input{
-        align-items: center;
-        display: flex;
-        top: 198px;
-    }
-    
-    .jv{
-        display: inline-block;
-        position: relative;
-        left: 421px;
-        top: 81px;
-    }
+/* lose*/
+.lose{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
+.off{
+    display: none;
+}
+.lose h1{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    color: #ffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-105%);
+    cursor: none;
+}
+.lose h2{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: lightcoral;
+    text-shadow: 0 0 10px   red;
+    -webkit-text-stroke: 1px white ;    
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%,-50%);
+    cursor: none;
+}
+
+
+
