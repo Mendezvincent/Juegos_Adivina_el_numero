@@ -37,6 +37,13 @@ body{
     font-style: normal;
     text-transform: capitalize;
 }
+.inico p{
+    color: #d4d4d4;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize
+}
 .inico input[Type="text"]{
     width: 5%;
     padding: 50px;
@@ -101,6 +108,8 @@ body{
     position: relative;
     top: 25px;
     text-transform: uppercase;
+    text-shadow: 0 0 10px   rgb(255, 245, 58);
+    -webkit-text-stroke: 1px rgb(251, 255, 0) ;   
 }
 /* win */
 .win{
@@ -177,7 +186,13 @@ body{
     top: 50%;
     transform: translate(-50%,-50%);
 }
-.off{
+.poco-off{
+    display: none;
+}
+.lose-off{
+    display: none;
+}
+.win-off{
     display: none;
 }
 .lose h1{
@@ -189,7 +204,7 @@ body{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-105%);
+    transform: translate(-50%,-80%);
     cursor: none;
 }
 .lose h2{
@@ -199,12 +214,12 @@ body{
     font-size: 70px;
     text-transform: uppercase;
     color: lightcoral;
-    text-shadow: 0 0 10px   red;
-    -webkit-text-stroke: 1px white ;    
+    text-shadow: 0 0 10px red;
+    -webkit-text-stroke: 1px white ;
     position: absolute;
     left: 50%;
     top: 0%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-20%);
     cursor: none;
 }
 
